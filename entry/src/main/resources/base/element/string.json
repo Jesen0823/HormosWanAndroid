@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "bottom_text_home",
+      "value": "label"
+    },
+    {
+      "name": "bottom_text_nav",
+      "value": "label"
+    },
+    {
+      "name": "bottom_text_project",
+      "value": "label"
+    },
+    {
+      "name": "bottom_text_msg",
+      "value": "label"
+    },
+    {
+      "name": "bottom_text_mine",
+      "value": "label"
     }
   ]
 }

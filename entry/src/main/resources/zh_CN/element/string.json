@@ -11,6 +11,26 @@
     {
       "name": "EntryAbility_label",
       "value": "label"
+    },
+    {
+      "name": "bottom_text_home",
+      "value": "首页"
+    },
+    {
+      "name": "bottom_text_nav",
+      "value": "导航"
+    },
+    {
+      "name": "bottom_text_project",
+      "value": "项目"
+    },
+    {
+      "name": "bottom_text_msg",
+      "value": "消息"
+    },
+    {
+      "name": "bottom_text_mine",
+      "value": "我的"
     }
   ]
 }
