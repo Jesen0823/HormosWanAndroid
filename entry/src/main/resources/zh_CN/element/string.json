@@ -91,6 +91,14 @@
     {
       "name": "internet_err",
       "value": "网络加载失败！"
+    },
+    {
+      "name": "topTag",
+      "value": "置顶"
+    },
+    {
+      "name": "no_more_data",
+      "value": "没有更多数据了"
     }
   ]
 }

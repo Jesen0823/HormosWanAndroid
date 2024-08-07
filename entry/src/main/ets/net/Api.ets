@@ -11,6 +11,11 @@ export default class Api{
 
   //2-用户信息
   static readonly userInfUrl: string = Api.baseURL + 'user/lg/userinfo/json';
+
+  //3-首页
+  static readonly bannerUrl: string = Api.baseURL + 'banner/json';
+  static readonly articleTopUrl: string = Api.baseURL + 'article/top/json';
+  static readonly articleListUrl: string = Api.baseURL + 'article/list';
 }
 
 

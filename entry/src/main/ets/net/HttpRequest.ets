@@ -26,5 +26,13 @@ httpRequestPost(
 // 03- 登出
 const logoutReq = (): Promise<ResponseResult> => httpRequestGet(Api.logoutUrl);
 
+//04- home(首页)
+const bannerReq = ():Promise<ResponseResult> => httpRequestGet(Api.bannerUrl);
+const articleTopReq = ():Promise<ResponseResult> => httpRequestGet(Api.articleTopUrl);
+const articleListReq = (page: number):Promise<ResponseResult> => httpRequestGet(`${Api.articleListUrl}/${page}/json`);
+
+
 export {
-  loginReq, registerReq, logoutReq, }
+  loginReq, registerReq, logoutReq,
+  bannerReq,articleTopReq,articleListReq
+}
