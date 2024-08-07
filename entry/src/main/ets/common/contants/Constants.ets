@@ -38,4 +38,37 @@ export default class Constants {
    * Page transition exit delay.
    */
   static readonly EXIT_DELAY: number = 100;
+
+  /**
+   * Preference-key
+   */
+  static readonly Cookie: string = 'cookie';
+
+  static readonly INPUT_PADDING_LEFT = 0;
+  /**
+   * Delay time of simulated login
+   */
+  static readonly LOGIN_DELAY_TIME = 2000;
+  /**
+   * Input length of the account.
+   */
+  static readonly INPUT_ACCOUNT_LENGTH = 16;
+  /**
+   *  Input length of the password.
+   */
+  static readonly INPUT_PASSWORD_LENGTH = 16;
+  /**
+   * The width of button
+   */
+  static readonly BUTTON_WIDTH = '90%';
+  static readonly SET_LIST_WIDTH = '42%';
+
+
+  /**
+   * route path
+   */
+  static readonly Splash_Path: string = 'pages/SplashPage';
+  static readonly MainPage_Path: string = 'pages/MainPage';
+  static readonly LoginRegister_Path: string = 'pages/LoginRegisterPage';
+
 }

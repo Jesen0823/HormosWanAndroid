@@ -34,7 +34,7 @@ struct SplashPage {
 
   jumpToMain() {
     this.clearTime();
-    router.replaceUrl({ url: 'pages/MainPage' })
+    router.replaceUrl({ url: Constants.MainPage_Path })
   }
 
   aboutToDisappear() {
