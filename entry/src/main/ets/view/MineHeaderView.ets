@@ -26,6 +26,7 @@ export default struct MineHeaderView {
   }
 
   jumpLogin() {
+    Logger.debug('Mine jumpLogin>>');
     router.pushUrl({
       url: Constants.LoginRegister_Path
     }, router.RouterMode.Standard, (err) => {
@@ -38,6 +39,7 @@ export default struct MineHeaderView {
   }
 
   jumpPath(path: string) {
+    Logger.debug('Mine jumpPath>> path',path);
     if (Utils.isEmpty(this.userData.userInfo.username)) {
       prompt.showToast({ message: '请先登录' });
       return;
@@ -94,7 +96,8 @@ export default struct MineHeaderView {
 
           Image($r('app.media.ic_arrow_right_blue'))
             .size({ width: $r('app.float.30vp'), height: $r('app.float.30vp') })
-        }.width(Constants.FULL_PERCENT)
+        }
+        .width(Constants.FULL_PERCENT)
         .onClick(() => {
           if (Utils.isEmpty(this.userData.userInfo.username)) {
             this.jumpLogin()
