@@ -3,7 +3,7 @@ import { httpRequestGet, httpRequestPost } from './HttpService';
 import ResponseResult from './ResponseResult';
 
 //01- login(登录)
-const loginReq = (username: string, password: string): Promise<ResponseResult> =>
+const loginRequest = (username: string, password: string): Promise<ResponseResult> =>
 httpRequestPost(
   `${Api.loginUrl}?username=${username}&password=${password}`,
   Object({
@@ -13,7 +13,7 @@ httpRequestPost(
 );
 
 // 02- register(注册)
-const registerReq = (username: string, password: string, repassword: string): Promise<ResponseResult> =>
+const registerRequest = (username: string, password: string, repassword: string): Promise<ResponseResult> =>
 httpRequestPost(
   `${Api.registerUrl}?username=${username}&password=${password}&repassword=${repassword}`,
   Object({
@@ -24,23 +24,28 @@ httpRequestPost(
 );
 
 // 03- 登出
-const logoutReq = (): Promise<ResponseResult> => httpRequestGet(Api.logoutUrl);
+const logoutRequest = (): Promise<ResponseResult> => httpRequestGet(Api.logoutUrl);
 
 //04- home(首页)
-const bannerReq = ():Promise<ResponseResult> => httpRequestGet(Api.bannerUrl);
-const articleTopReq = ():Promise<ResponseResult> => httpRequestGet(Api.articleTopUrl);
-const articleListReq = (page: number):Promise<ResponseResult> => httpRequestGet(`${Api.articleListUrl}/${page}/json`);
+const bannerRequest = ():Promise<ResponseResult> => httpRequestGet(Api.bannerUrl);
+const articleTopRequest = ():Promise<ResponseResult> => httpRequestGet(Api.articleTopUrl);
+const articleListRequest = (page: number):Promise<ResponseResult> => httpRequestGet(`${Api.articleListUrl}/${page}/json`);
 
 //05-我的
-const userReq = ():Promise<ResponseResult> => httpRequestGet(Api.userInfUrl);
+const userRequest = ():Promise<ResponseResult> => httpRequestGet(Api.userInfUrl);
 
 //06 积分 排行榜
-const rankReq = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.rankUrl}/${page}/json`);
-const coinReq = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.coinUrl}/${page}/json`);
+const rankRequest = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.rankUrl}/${page}/json`);
+const coinRequest = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.coinUrl}/${page}/json`);
+
+//2-nav(导航)
+const navRequest = ():Promise<ResponseResult> => httpRequestGet(Api.navUrl);
+const navListRequest = (page: number, cid: number):Promise<ResponseResult> => httpRequestGet(`${Api.navListUrl}/${page}/json?cid=${cid}`);
 
 export {
-  loginReq, registerReq, logoutReq,
-  bannerReq,articleTopReq,articleListReq,
-  userReq,
-  rankReq,coinReq,
+  loginRequest, registerRequest, logoutRequest,
+  bannerRequest,articleTopRequest,articleListRequest,
+  userRequest as userReq,
+  rankRequest,coinRequest,
+  navRequest,navListRequest,
 }

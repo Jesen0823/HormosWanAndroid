@@ -1,7 +1,7 @@
 import { Article, ArticleList } from '../bean/ArticleBean'
 import { Banner } from '../bean/BannerBean'
 import HttpConfig from '../net/HttpConfig'
-import { articleListReq, articleTopReq, bannerReq } from '../net/HttpRequest'
+import { articleListRequest, articleTopRequest, bannerRequest } from '../net/HttpRequest'
 import ResponseResult from '../net/ResponseResult'
 import Logger from '../utils/Logger'
 
@@ -17,7 +17,7 @@ class HomeViewModel {
 
   getBanner(): Promise<Banner[]> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      bannerReq().then((data: ResponseResult) => {
+      bannerRequest().then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(data.data);
         } else {
@@ -30,7 +30,7 @@ class HomeViewModel {
 
   getArticleTop(): Promise<Article[]> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      articleTopReq().then((data: ResponseResult) => {
+      articleTopRequest().then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(data.data);
         } else {
@@ -43,7 +43,7 @@ class HomeViewModel {
 
   getArticle(page: number): Promise<ArticleList> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      articleListReq(page).then((data: ResponseResult) => {
+      articleListRequest(page).then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(data.data);
         } else {

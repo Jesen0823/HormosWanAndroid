@@ -1,5 +1,5 @@
 import HttpConfig from '../net/HttpConfig';
-import {loginReq,registerReq} from '../net/HttpRequest';
+import {loginRequest,registerRequest} from '../net/HttpRequest';
 import ResponseResult from '../net/ResponseResult';
 import {UserInfo} from '../bean/UserInfoBean';
 import Logger from '../utils/Logger';
@@ -8,7 +8,7 @@ class UserAccountViewModel{
 
   userLogin(userName:string,passWord:string):Promise<ResponseResult>{
     return new Promise(async (resolve:Function,reject:Function) =>{
-      loginReq(userName,passWord).then((data:ResponseResult)=>{
+      loginRequest(userName,passWord).then((data:ResponseResult)=>{
         if(data.errorCode === HttpConfig.SERVER_CODE_SUCCESS){
           Logger.info('userLogin success');
           resolve(data);
@@ -22,7 +22,7 @@ class UserAccountViewModel{
 
   userRegister(userName: string, passWord: string, rePassWord: string): Promise<ResponseResult> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      registerReq(userName, passWord, rePassWord).then((data: ResponseResult) => {
+      registerRequest(userName, passWord, rePassWord).then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           Logger.info('userRegister success');
           resolve(data);

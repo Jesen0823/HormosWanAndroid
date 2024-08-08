@@ -43,7 +43,6 @@ export default class Constants {
    * Preference-key
    */
   static readonly Cookie: string = 'cookie';
-
   static readonly INPUT_PADDING_LEFT = 0;
   /**
    * Delay time of simulated login
@@ -72,7 +71,8 @@ export default class Constants {
   static readonly LoginRegister_Path: string = 'pages/LoginRegisterPage';
   static readonly WebPage_Path: string = 'pages/WebPage';
   static readonly SettingPage_Path: string = 'pages/SettingPage';
-  static readonly UserInfoPage_Path:string ='pages/UserInfoPage';
+  static readonly UserInfoPage_Path: string = 'pages/UserInfoPage';
+  static readonly NavTabPage_Path: string = 'pages/NavDetailPage';
 
   /**
    * WebView

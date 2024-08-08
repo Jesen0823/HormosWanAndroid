@@ -1,4 +1,4 @@
-import { coinReq, rankReq } from '../net/HttpRequest';
+import { coinRequest, rankRequest } from '../net/HttpRequest';
 import { RankData } from '../bean/RankBean';
 import ResponseResult from '../net/ResponseResult';
 import HttpConfig from '../net/HttpConfig';
@@ -9,7 +9,7 @@ class UserInfoViewModel{
   // 排行榜
   getRank(page:number):Promise<RankData>{
     return new Promise(async (resolve:Function,reject:Function)=>{
-      rankReq(page).then((data:ResponseResult)=>{
+      rankRequest(page).then((data:ResponseResult)=>{
         if(data.errorCode === HttpConfig.SERVER_CODE_SUCCESS){
           resolve(data.data);
         }else{
@@ -23,7 +23,7 @@ class UserInfoViewModel{
   // 签到积分
   getCoin(page: number): Promise<CoinData> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      coinReq(page).then((data: ResponseResult) => {
+      coinRequest(page).then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(data.data);
         } else {

@@ -20,6 +20,11 @@ export default class Api{
   //4-排行榜、积分
   static readonly rankUrl: string = Api.baseURL + 'coin/rank/';
   static readonly coinUrl: string = Api.baseURL + 'lg/coin/list/';
+
+  //5-导航
+  static readonly navUrl: string = Api.baseURL + 'tree/json';
+  static readonly navListUrl: string = Api.baseURL + 'article/list';
+
 }
 
 
