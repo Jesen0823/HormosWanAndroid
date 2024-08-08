@@ -16,6 +16,10 @@ export default class Api{
   static readonly bannerUrl: string = Api.baseURL + 'banner/json';
   static readonly articleTopUrl: string = Api.baseURL + 'article/top/json';
   static readonly articleListUrl: string = Api.baseURL + 'article/list';
+
+  //4-排行榜、积分
+  static readonly rankUrl: string = Api.baseURL + 'coin/rank/';
+  static readonly coinUrl: string = Api.baseURL + 'lg/coin/list/';
 }
 
 

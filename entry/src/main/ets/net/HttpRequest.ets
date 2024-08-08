@@ -34,8 +34,13 @@ const articleListReq = (page: number):Promise<ResponseResult> => httpRequestGet(
 //05-我的
 const userReq = ():Promise<ResponseResult> => httpRequestGet(Api.userInfUrl);
 
+//06 积分 排行榜
+const rankReq = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.rankUrl}/${page}/json`);
+const coinReq = (page:number):Promise<ResponseResult> => httpRequestGet(`${Api.coinUrl}/${page}/json`);
+
 export {
   loginReq, registerReq, logoutReq,
   bannerReq,articleTopReq,articleListReq,
   userReq,
+  rankReq,coinReq,
 }

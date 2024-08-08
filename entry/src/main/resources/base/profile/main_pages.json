@@ -4,6 +4,7 @@
     "pages/MainPage",
     "pages/LoginRegisterPage",
     "pages/WebPage",
-    "pages/SettingPage"
+    "pages/SettingPage",
+    "pages/UserInfoPage"
   ]
 }

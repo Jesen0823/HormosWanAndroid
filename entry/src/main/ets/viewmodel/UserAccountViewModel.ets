@@ -10,6 +10,7 @@ class UserAccountViewModel{
     return new Promise(async (resolve:Function,reject:Function) =>{
       loginReq(userName,passWord).then((data:ResponseResult)=>{
         if(data.errorCode === HttpConfig.SERVER_CODE_SUCCESS){
+          Logger.info('userLogin success');
           resolve(data);
         }else {
           Logger.error('userLogin failed',JSON.stringify(data));
@@ -23,6 +24,7 @@ class UserAccountViewModel{
     return new Promise(async (resolve: Function, reject: Function) => {
       registerReq(userName, passWord, rePassWord).then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
+          Logger.info('userRegister success');
           resolve(data);
         } else {
           Logger.error('userRegister failed', JSON.stringify(data));

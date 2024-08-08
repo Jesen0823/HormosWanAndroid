@@ -22,7 +22,8 @@ export default struct TitleBar {
         .textAlign(TextAlign.Center)
         .fontColor(Color.White)
         .maxLines(1)
-        .fontSize($r('app.float.22fp'))
+        .fontWeight(FontWeight.Bold)
+        .fontSize($r('app.float.24fp'))
         .flexGrow(1)
 
       Text('')

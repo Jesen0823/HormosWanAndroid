@@ -39,12 +39,20 @@ export default struct MineHeaderView {
   }
 
   jumpPath(path: string) {
-    Logger.debug('Mine jumpPath>> path',path);
+    Logger.debug('Mine jumpPath>> path', path);
     if (Utils.isEmpty(this.userData.userInfo.username)) {
       prompt.showToast({ message: '请先登录' });
       return;
     }
     console.log("jumpPath =>", path);
+    switch (path) {
+      case Constants.COIN:
+      case Constants.RANK:
+        router.pushUrl({ url: Constants.UserInfoPage_Path, params: { title: path } });
+        break;
+      default:
+        break;
+    }
   }
 
   @Builder
@@ -123,10 +131,10 @@ export default struct MineHeaderView {
       }
     }.width(Constants.FULL_PERCENT)
     .padding({
-      left:$r('app.float.10vp'),
-      right:$r('app.float.10vp'),
-      top:$r('app.float.30vp'),
-      bottom:$r('app.float.20vp')
+      left: $r('app.float.10vp'),
+      right: $r('app.float.10vp'),
+      top: $r('app.float.30vp'),
+      bottom: $r('app.float.20vp')
     })
   }
 }

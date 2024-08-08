@@ -72,6 +72,7 @@ export default class Constants {
   static readonly LoginRegister_Path: string = 'pages/LoginRegisterPage';
   static readonly WebPage_Path: string = 'pages/WebPage';
   static readonly SettingPage_Path: string = 'pages/SettingPage';
+  static readonly UserInfoPage_Path:string ='pages/UserInfoPage';
 
   /**
    * WebView
