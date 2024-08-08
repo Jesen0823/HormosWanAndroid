@@ -31,8 +31,11 @@ const bannerReq = ():Promise<ResponseResult> => httpRequestGet(Api.bannerUrl);
 const articleTopReq = ():Promise<ResponseResult> => httpRequestGet(Api.articleTopUrl);
 const articleListReq = (page: number):Promise<ResponseResult> => httpRequestGet(`${Api.articleListUrl}/${page}/json`);
 
+//05-我的
+const userReq = ():Promise<ResponseResult> => httpRequestGet(Api.userInfUrl);
 
 export {
   loginReq, registerReq, logoutReq,
-  bannerReq,articleTopReq,articleListReq
+  bannerReq,articleTopReq,articleListReq,
+  userReq,
 }

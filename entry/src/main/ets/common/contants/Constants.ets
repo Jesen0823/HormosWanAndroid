@@ -71,6 +71,7 @@ export default class Constants {
   static readonly MainPage_Path: string = 'pages/MainPage';
   static readonly LoginRegister_Path: string = 'pages/LoginRegisterPage';
   static readonly WebPage_Path: string = 'pages/WebPage';
+  static readonly SettingPage_Path: string = 'pages/SettingPage';
 
   /**
    * WebView
@@ -86,4 +87,12 @@ export default class Constants {
   static readonly WebConstant_PROGRESS_SCALE_WIDTH: number = 5;
   static readonly WebConstant_PROGRESS_POSITION_X: string = '40%';
   static readonly WebConstant_PROGRESS_POSITION_Y: string = '40%';
+
+  /**
+   * 常量
+   */
+  static readonly RANK = 'rank';
+  static readonly COLLECT = 'collect';
+  static readonly LEVEL = 'level';
+  static readonly COIN = 'coin';
 }

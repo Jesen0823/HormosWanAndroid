@@ -1,10 +1,15 @@
+import Constants from '../common/contants/Constants'
+import MineFuncView from '../view/MineFuncView'
+import MineHeaderView from '../view/MineHeaderView'
+
 @Component
 export default struct MinePage{
   build(){
-    Column(){
-      Text('我的')
-        .fontSize(40)
-        .fontWeight(FontWeight.Bold)
-    }.width('100%')
+   Scroll(){
+     Column(){
+       MineHeaderView()
+       MineFuncView()
+     }.height(Constants.FULL_PERCENT)
+   }
   }
 }

@@ -13,7 +13,7 @@ class UserAccountViewModel{
           resolve(data);
         }else {
           Logger.error('userLogin failed',JSON.stringify(data));
-          resolve(data);
+          reject(data);
         }
       })
     })
@@ -26,7 +26,7 @@ class UserAccountViewModel{
           resolve(data);
         } else {
           Logger.error('userRegister failed', JSON.stringify(data));
-          resolve(data);
+          reject(data);
         }
       })
     })

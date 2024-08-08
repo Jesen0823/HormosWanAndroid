@@ -99,6 +99,10 @@
     {
       "name": "no_more_data",
       "value": "No More Data"
+    },
+    {
+      "name": "mine_login_wel",
+      "value": "Welcome Login"
     }
   ]
 }
