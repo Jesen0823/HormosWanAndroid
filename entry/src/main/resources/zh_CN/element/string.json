@@ -10,7 +10,7 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "WanAndroid鸿蒙"
     },
     {
       "name": "bottom_text_home",
@@ -119,6 +119,17 @@
     {
       "name": "has_read_msg_mk",
       "value": "已读消息"
+    },{
+      "name": "setting_list_theme",
+      "value": "主题"
+    },
+    {
+      "name": "setting_list_language",
+      "value": "语言"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "关于"
     }
   ]
 }

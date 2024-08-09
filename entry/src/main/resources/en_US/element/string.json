@@ -119,6 +119,18 @@
     {
       "name": "has_read_msg_mk",
       "value": "Had read Msg"
+    },
+    {
+      "name": "setting_list_theme",
+      "value": "Theme"
+    },
+    {
+      "name": "setting_list_language",
+      "value": "Language"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "About"
     }
   ]
 }

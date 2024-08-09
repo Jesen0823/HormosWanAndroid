@@ -2,7 +2,7 @@ import router from '@ohos.router'
 import Constants from '../common/contants/Constants'
 
 /**
- * TitleBar-标题栏
+ * 标题栏
  */
 @Component
 export default struct TitleBar {
@@ -12,9 +12,9 @@ export default struct TitleBar {
 
     //1-头部
     Flex({ alignItems: ItemAlign.Center }) {
-      Image($r('app.media.ic_arrow_left_gray'))
+      Image($r('app.media.ic_arrow_left_blob'))
         .size({ width: $r('app.float.30vp'), height: $r('app.float.30vp') })
-        .margin({ right: $r('app.float.10vp') })
+        .margin({ right: $r('app.float.10vp') ,left:$r('app.float.16vp')})
         .onClick(() => {
           router.back()
         })

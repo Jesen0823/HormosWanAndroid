@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "模块描述"
     },
     {
       "name": "EntryAbility_desc",
@@ -10,115 +10,126 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "WanAndroid鸿蒙"
     },
     {
       "name": "bottom_text_home",
-      "value": "Home"
+      "value": "首页"
     },
     {
       "name": "bottom_text_nav",
-      "value": "Nav"
+      "value": "导航"
     },
     {
       "name": "bottom_text_project",
-      "value": "Project"
+      "value": "项目"
     },
     {
       "name": "bottom_text_msg",
-      "value": "Msg"
+      "value": "消息"
     },
     {
       "name": "bottom_text_mine",
-      "value": "Mine"
+      "value": "我的"
     },
     {
       "name": "http_error_message",
-      "value": "Network request failed, please try later!"
+      "value": "网络请求失败，请稍后尝试！"
     },
     {
       "name": "page_none_msg",
-      "value": "Network loading failure"
+      "value": "网络加载失败"
     },
     {
       "name": "input_empty_tips",
-      "value": "The input cannot be empty."
+      "value": "输入不能为空"
     },
     {
       "name": "login_page",
-      "value": "Login page"
+      "value": "登录"
     },
     {
       "name": "register_page",
-      "value": "register page"
+      "value": "注册"
     },
     {
       "name": "login_more",
-      "value": "Log in to your account to use more services"
+      "value": "登录帐号以使用更多服务"
     },
     {
       "name": "register_more",
-      "value": "register to your account to use more services"
+      "value": "注册帐号以使用更多服务"
     },
     {
       "name": "account",
-      "value": "Account"
+      "value": "帐号"
     },
     {
       "name": "password",
-      "value": "Password"
+      "value": "密码"
     },
     {
       "name": "repassword",
-      "value": "repassword"
+      "value": "确认密码"
     },
     {
       "name": "login",
-      "value": "Log in"
+      "value": "登录"
     },
     {
       "name": "register",
-      "value": "register"
+      "value": "注册"
     },
     {
       "name": "register_account",
-      "value": "Registering an Account"
+      "value": "没有账号，去注册"
     },
     {
       "name": "login_account",
-      "value": "login an Account"
+      "value": "已有账号，去登录"
     },
     {
       "name": "internet_err",
-      "value": "Failed to load the network."
+      "value": "网络加载失败！"
     },
     {
       "name": "topTag",
-      "value": "TOP"
+      "value": "置顶"
     },
     {
       "name": "no_more_data",
-      "value": "No More Data"
+      "value": "没有更多数据了"
     },
     {
       "name": "mine_login_wel",
-      "value": "Welcome Login"
+      "value": "欢迎登录"
     },
     {
       "name": "empty_content_tip",
-      "value": "Sorry, There is No data to show!"
+      "value": "暂时没有数据展示!"
     },
     {
       "name": "msg_need_login",
-      "value": "Login to see your msg"
+      "value": "登录查看消息"
     },
     {
       "name": "un_read_msg_mk",
-      "value": "Unread Msg"
+      "value": "未读消息"
     },
     {
       "name": "has_read_msg_mk",
-      "value": "Had read Msg"
+      "value": "已读消息"
+    },{
+      "name": "setting_list_theme",
+      "value": "主题"
+    },
+    {
+      "name": "setting_list_language",
+      "value": "语言"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "关于"
     }
   ]
 }
