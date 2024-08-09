@@ -14,7 +14,7 @@ export default struct NavListView {
   @Watch('tabChanged') @Link currentIndex: number;
   @State articleListData: ArticleList = new ArticleList();
   @State articleDatas: Article[] = [];
-  @State pageNum: number = 0;
+  @State pageNum: number = 1;
 
   // 用来绑定列表组件
   private scroller: Scroller = new Scroller();

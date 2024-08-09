@@ -25,6 +25,10 @@ export default class Api{
   static readonly navUrl: string = Api.baseURL + 'tree/json';
   static readonly navListUrl: string = Api.baseURL + 'article/list';
 
+  //6-项目
+  static readonly projectUrl: string = Api.baseURL + 'project/tree/json';
+  static readonly projectListUrl: string = Api.baseURL + 'project/list';
+
 }
 
 
