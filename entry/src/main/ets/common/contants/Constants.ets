@@ -61,6 +61,14 @@ export default class Constants {
    */
   static readonly BUTTON_WIDTH = '90%';
   static readonly SET_LIST_WIDTH = '42%';
+  /**
+   * Type font weight.
+   */
+  static readonly TYPE_FONT_WEIGHT: number = 700;
+  /**
+   * Desc font weight.
+   */
+  static readonly DESC_FONT_WEIGHT: number = 400;
 
 
   /**

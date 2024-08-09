@@ -103,6 +103,10 @@
     {
       "name": "mine_login_wel",
       "value": "Welcome Login"
+    },
+    {
+      "name": "empty_content_tip",
+      "value": "Sorry, There is No data to show!"
     }
   ]
 }

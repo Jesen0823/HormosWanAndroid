@@ -103,6 +103,10 @@
     {
       "name": "mine_login_wel",
       "value": "欢迎登录"
+    },
+    {
+      "name": "empty_content_tip",
+      "value": "暂时没有数据展示!"
     }
   ]
 }

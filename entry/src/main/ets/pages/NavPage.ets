@@ -50,7 +50,7 @@ export default struct NavPage {
                     .margin($r('app.float.5vp'))
                 }.params({ index: index, data: navItem })
               })
-            }
+            }.width('90%').padding($r('app.float.10vp'))
           }
         }
       })
