@@ -107,6 +107,18 @@
     {
       "name": "empty_content_tip",
       "value": "Sorry, There is No data to show!"
+    },
+    {
+      "name": "msg_need_login",
+      "value": "Login to see your msg"
+    },
+    {
+      "name": "un_read_msg_mk",
+      "value": "Unread Msg"
+    },
+    {
+      "name": "has_read_msg_mk",
+      "value": "Had read Msg"
     }
   ]
 }

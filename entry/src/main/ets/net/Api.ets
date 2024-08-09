@@ -29,6 +29,9 @@ export default class Api{
   static readonly projectUrl: string = Api.baseURL + 'project/tree/json';
   static readonly projectListUrl: string = Api.baseURL + 'project/list';
 
+  //7-消息 未读/已读
+  static readonly msgUnreadUrl: string = Api.baseURL + 'message/lg/count_unread/json';
+  static readonly msgReadUrl: string = Api.baseURL + 'message/lg/readed_list/';
 }
 
 

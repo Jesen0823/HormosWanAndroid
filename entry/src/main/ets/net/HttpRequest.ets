@@ -43,8 +43,12 @@ const navRequest = ():Promise<ResponseResult> => httpRequestGet(Api.navUrl);
 const navListRequest = (page: number, cid: number):Promise<ResponseResult> => httpRequestGet(`${Api.navListUrl}/${page}/json?cid=${cid}`);
 
 //08- Project 项目
-const projectReq = ():Promise<ResponseResult> => httpRequestGet(Api.projectUrl);
-const projectListReq = (page: number, cid: number):Promise<ResponseResult> => httpRequestGet(`${Api.projectListUrl}/${page}/json?cid=${cid}`);
+const projectRequest = ():Promise<ResponseResult> => httpRequestGet(Api.projectUrl);
+const projectListRequest = (page: number, cid: number):Promise<ResponseResult> => httpRequestGet(`${Api.projectListUrl}/${page}/json?cid=${cid}`);
+
+//4-msg(消息)
+const msgUnReadRequest = ():Promise<ResponseResult> =>httpRequestGet(Api.msgUnreadUrl);
+const msgReadRequest = (page: number):Promise<ResponseResult>=>httpRequestGet(`${Api.msgReadUrl}/${page}/json`);
 
 
 export {
@@ -53,5 +57,6 @@ export {
   userRequest as userReq,
   rankRequest,coinRequest,
   navRequest,navListRequest,
-  projectReq,projectListReq,
+  projectRequest,projectListRequest,
+  msgUnReadRequest,msgReadRequest
 }

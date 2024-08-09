@@ -1,14 +1,14 @@
 import { ArticleList } from '../bean/ArticleBean';
 import { ProjectItem } from '../bean/ProjectBean';
 import HttpConfig from '../net/HttpConfig';
-import { projectListReq, projectReq } from '../net/HttpRequest';
+import { projectListRequest, projectRequest } from '../net/HttpRequest';
 import ResponseResult from '../net/ResponseResult';
 import Logger from '../utils/Logger';
 
 class ProjectViewModel {
   getProject(): Promise<ProjectItem[]> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      projectReq().then((result: ResponseResult) => {
+      projectRequest().then((result: ResponseResult) => {
         if (result.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(result.data);
         } else {
@@ -21,7 +21,7 @@ class ProjectViewModel {
 
   getProjectList(page: number, cid: number): Promise<ArticleList> {
     return new Promise(async (resolve: Function, reject: Function) => {
-      projectListReq(page = page, cid = cid).then((result: ResponseResult) => {
+      projectListRequest(page = page, cid = cid).then((result: ResponseResult) => {
         if (result.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           resolve(result.data);
         } else {

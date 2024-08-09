@@ -107,6 +107,18 @@
     {
       "name": "empty_content_tip",
       "value": "暂时没有数据展示!"
+    },
+    {
+      "name": "msg_need_login",
+      "value": "登录查看消息"
+    },
+    {
+      "name": "un_read_msg_mk",
+      "value": "未读消息"
+    },
+    {
+      "name": "has_read_msg_mk",
+      "value": "已读消息"
     }
   ]
 }
