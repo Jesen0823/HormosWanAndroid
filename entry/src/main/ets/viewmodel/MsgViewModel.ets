@@ -12,7 +12,7 @@ class MsgViewModel{
         if(result.errorCode == HttpConfig.SERVER_CODE_SUCCESS){
           resolve(result.data);
         }else{
-          console.log('getMsgUnRead failed',JSON.stringify(result));
+          console.log('Jesen0823,getMsgUnRead failed',JSON.stringify(result));
           reject($r('app.string.page_none_msg'));
         }
       })

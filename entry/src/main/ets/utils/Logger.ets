@@ -15,7 +15,7 @@
 
 import hilog from '@ohos.hilog';
 
-const LOGGER_PREFIX: string = 'WanWan';
+const LOGGER_PREFIX: string = 'Jesen0823,';
 
 class Logger {
   private domain: number;

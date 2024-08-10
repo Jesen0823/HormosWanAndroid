@@ -13,7 +13,7 @@ export default struct MsgReadListView{
   aboutToAppear() {
     msgViewModel.getMsgRead(1).then((msgData: MsgData) => {
       this.msgList = msgData.datas
-      console.log('readMsg>>>', msgData)
+      console.log('Jesen0823,readMsg>>>', msgData)
     })
   }
 

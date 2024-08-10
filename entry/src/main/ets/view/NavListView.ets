@@ -29,7 +29,7 @@ export default struct NavListView {
 
   getNavListData(page: number) {
     navViewModel.getNavArticleList(page, this.optionsMap[this.currentIndex]).then((data: ArticleList) => {
-      console.log('NavListView getNavListData >>>data', data)
+      console.log('Jesen0823,NavListView getNavListData >>>data', data)
       this.articleListData = data;
       this.articleDatas.push(...data.datas);
     })

@@ -18,10 +18,11 @@ export default struct MineHeaderView {
 
   aboutToAppear() {
     mineViewModel.getUserInfo().then((data: UserData) => {
+      console.log('Jesen0823,MineHeaderView,getUserInfo(), data:'+JSON.stringify(data));
       this.userData = data;
     }).catch((e: Error) => {
       this.userData = new UserData();
-      console.log('getUserInfo, error: ' + e.message);
+      console.log('Jesen0823,getUserInfo, error: ' + e.message);
     })
   }
 
@@ -31,10 +32,10 @@ export default struct MineHeaderView {
       url: Constants.LoginRegister_Path
     }, router.RouterMode.Standard, (err) => {
       if (err) {
-        console.error(`Invoke pushUrl failed, code is ${err.code}, message is ${err.message}`);
+        console.error(`Jesen0823,Invoke pushUrl failed, code is ${err.code}, message is ${err.message}`);
         return;
       }
-      console.info('Invoke pushUrl succeeded.');
+      console.info('Jesen0823,Invoke pushUrl succeeded.');
     });
   }
 
@@ -44,7 +45,7 @@ export default struct MineHeaderView {
       prompt.showToast({ message: '请先登录' });
       return;
     }
-    console.log("jumpPath =>", path);
+    console.log("Jesen0823,jumpPath =>", path);
     switch (path) {
       case Constants.COIN:
       case Constants.RANK:

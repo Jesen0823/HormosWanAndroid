@@ -33,14 +33,14 @@ export default struct HomePage {
       this.articleListData = result[2]
 
       this.articleData = [...this.articleTopData, ...this.articleListData.datas]
-      console.log("result")
+      console.log("Jesen0823,getHomeData result:"+JSON.stringify(result));
     })
   }
 
   getHomeArticleListData(page: number) {
     homeViewModel.getArticle(page).then(result => {
       this.articleData.push(...result.datas)
-      console.log('getHomeArticleListData article>>>', JSON.stringify(result))
+      console.log('Jesen0823,getHomeArticleListData article>>>', JSON.stringify(result))
     })
   }
 

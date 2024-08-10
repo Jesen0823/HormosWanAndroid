@@ -61,9 +61,11 @@ function httpRequest(url: string, method: http.RequestMethod, params?: object): 
   let httpRequest = http.createHttp();
   let cookie = PreferencesUtils.getStringData(Constants.Cookie)
   httpRequest.on('headersReceive', (header) => {
-    //header['set-cookie'] = cookie;
-    //header['Cookie'] = PreferencesUtils.getStringData(Constants.Cookie)
-    //console.info('header: ' + JSON.stringify(header));
+    header['set-cookie'] = cookie;
+    header['Cookie'] = PreferencesUtils.getStringData(Constants.Cookie)
+    console.log('Jesen0823,request check1 cookie:'+PreferencesUtils.getStringData(Constants.Cookie));
+    console.log('Jesen0823,request check2 cookie:'+AppStorage.Get(Constants.Cookie));
+    console.info('Jesen0823,header: ' + JSON.stringify(header));
   });
 
   let responseResult = httpRequest.request(url, {
@@ -71,7 +73,7 @@ function httpRequest(url: string, method: http.RequestMethod, params?: object): 
     extraData: params,
     header: {
       'Content-Type': ContentType.JSON,
-      'Cookie': AppStorage.  Get(Constants.Cookie),
+      'Cookie': AppStorage.Get(Constants.Cookie),
     },
     readTimeout: HttpConfig.HTTP_READ_TIMEOUT,
     connectTimeout: HttpConfig.HTTP_READ_TIMEOUT,
@@ -81,10 +83,13 @@ function httpRequest(url: string, method: http.RequestMethod, params?: object): 
   // Processes the data and returns.
   return responseResult.then((value: http.HttpResponse) => {
     if (value.responseCode === HttpConfig.HTTP_CODE_200) {
+      console.log('Jesen0823,responseResult value:'+JSON.stringify(value));
       // Obtains the returned data.
       let result = `${value.result}`;
       if (url.includes("login") && !Utils.isEmpty(value.header['set-cookie']) || url.includes("register") && !Utils.isEmpty(value.header['set-cookie'])) {
-        AppStorage.Set(Constants.Cookie, `loginUserName_wanandroid_com=${params?['username']:''};` + value.header['set-cookie'])
+        console.log('Jesen0823,HttpService,AppStorage.Set(), url: '+url);
+        AppStorage.Set(Constants.Cookie, `loginUserName=${params['username']};loginUserPassword=${params['password']}${value.header['set-cookie']}`);
+        PreferencesUtils.putStringData(Constants.Cookie, `loginUserName=${params['username']};loginUserPassword=${params['password']}${value.header['set-cookie']}`);
       }
       let resultJson: ResponseResult = JSON.parse(result);
       if (resultJson.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {

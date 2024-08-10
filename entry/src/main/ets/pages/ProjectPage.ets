@@ -11,7 +11,7 @@ export default struct ProjectPage {
 
   aboutToAppear() {
     projectViewModel.getProject().then((result: ProjectItem[]) => {
-      console.log('ProjectPage getProject>>>', result);
+      console.log('Jesen0823,ProjectPage getProject>>>', JSON.stringify(result));
       this.projectData = result;
       this.projectData.forEach((project, index) => {
         this.optionsMap[index] = project.id;

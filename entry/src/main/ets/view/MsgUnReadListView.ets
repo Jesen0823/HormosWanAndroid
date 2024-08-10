@@ -12,7 +12,7 @@ export default struct MsgUnReadListView {
   aboutToAppear() {
     msgViewModel.getMsgUnRead().then((data: MsgData) => {
       this.msgList = data.datas;
-      console.log('MsgUnReadListView getMsgUnRead>>>', data);
+      console.log('Jesen0823,MsgUnReadListView getMsgUnRead>>>', data);
     })
   }
 

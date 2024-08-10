@@ -33,7 +33,7 @@ export default struct ProjectListView {
   getProjectListData(page: number) {
     projectViewModel.getProjectList(page, this.optionsMap[this.currentIndex])
       .then((data: ArticleList) => {
-        console.log('ProjectListView getProjectList>>>', data)
+        console.log('Jesen0823,ProjectListView getProjectList>>>', JSON.stringify(data));
         this.articleListData = data
         this.articleDatas.push(...data.datas)
       })

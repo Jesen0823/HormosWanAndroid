@@ -8,12 +8,12 @@ export default struct NavPage {
 
   aboutToAppear() {
     navViewModel.getNavPageData().then(result => {
-      console.log('NavPage >>getNavPageData ', result);
+      console.log('Jesen0823,NavPage >>getNavPageData ', JSON.stringify(result));
       this.navData = result;
     })
 
     navViewModel.getNavArticleList(0, 60).then(result => {
-      console.log('NavPage >> getNavArticleList', result);
+      console.log('Jesen0823,NavPage >> getNavArticleList', JSON.stringify(result));
     })
   }
 

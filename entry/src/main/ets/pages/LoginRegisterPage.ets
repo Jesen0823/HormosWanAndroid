@@ -60,7 +60,7 @@ export default struct LoginRegisterPage {
       this.isShowProgress = true;
       userAccountViewModel.userRegister(this.userName, this.passWord, this.rePassword)
         .then(result => {
-          console.log('UserInfo>>>', result)
+          console.log('Jesen0823,UserInfo>>>', JSON.stringify(result));
           if (!Utils.isEmpty(result.data as UserInfo)) {
             this.delayJump()
           } else {
@@ -77,7 +77,7 @@ export default struct LoginRegisterPage {
     } else {
       userAccountViewModel.userLogin(this.userName, this.passWord)
         .then((result: ResponseResult) => {
-          console.log('login result>>>', result)
+          console.log('Jesen0823,login result>>>', JSON.stringify(result));
           if (!Utils.isEmpty(result.data as UserInfo)) {
             this.delayJump()
           } else {

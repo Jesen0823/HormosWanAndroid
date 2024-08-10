@@ -6,13 +6,13 @@ export class BaseDataSource implements IDataSource {
   unregisterDataChangeListener(listener: DataChangeListener): void {
     const pos = this.listenerList.indexOf(listener);
     if(pos>=0){
-      console.info('remove listener');
+      console.info('Jesen0823,remove listener');
       this.listenerList.splice(pos,1);
     }
   }
 
   registerDataChangeListener(listener: DataChangeListener): void {
-    console.info('add listener');
+    console.info('Jesen0823,add listener');
     this.listenerList.push(listener);
   }
 
