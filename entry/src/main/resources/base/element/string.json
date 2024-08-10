@@ -130,6 +130,14 @@
     {
       "name": "setting_list_about",
       "value": "关于"
+    },
+    {
+      "name": "logout_tips",
+      "value": "Logout"
+    },
+    {
+      "name": "setting_title",
+      "value": "Setting"
     }
   ]
 }

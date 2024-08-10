@@ -28,7 +28,7 @@ export default struct SettingPage {
 
   build() {
     Column() {
-      TitleBar({ title: '设置' })
+      TitleBar({ title: $r('app.string.setting_title') })
 
       List() {
         ForEach(settingViewModel.getSettingListData(), (item: ResourceBean) => {
@@ -50,7 +50,7 @@ export default struct SettingPage {
       .borderRadius($r('app.float.16vp'))
       .padding({ top: $r('app.float.4vp'), bottom: $r('app.float.4vp') })
 
-      Button('退出登录', { type: ButtonType.Capsule })
+      Button($r('app.string.logout_tips'), { type: ButtonType.Capsule })
         .width(Constants.BUTTON_WIDTH)
         .height($r('app.float.40vp'))
         .fontSize($r('app.float.16fp'))

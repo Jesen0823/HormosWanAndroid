@@ -4,9 +4,10 @@ import Constants from '../common/contants/Constants'
 /**
  * 标题栏
  */
+@Preview
 @Component
 export default struct TitleBar {
-  title: string = '' //中间标题
+  title: string|Resource = '' //中间标题
 
   build() {
 

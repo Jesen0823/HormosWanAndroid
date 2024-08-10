@@ -131,6 +131,14 @@
     {
       "name": "setting_list_about",
       "value": "About"
+    },
+    {
+      "name": "logout_tips",
+      "value": "Logout"
+    },
+    {
+      "name": "setting_title",
+      "value": "Setting"
     }
   ]
 }
