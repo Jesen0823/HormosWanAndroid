@@ -4,16 +4,29 @@ import Constants from '../common/contants/Constants';
 import msgViewModel from '../viewmodel/MsgViewModel';
 import * as Utils from '../utils/StringUtils';
 import MsgItemView from './MsgItemView';
+import EventObservable from '../common/interface/EventObservable';
 
 @Component
 export default struct MsgUnReadListView {
   @State msgList: MsgItem[] = [];
+  @State loginState:boolean = false;
 
   aboutToAppear() {
+    let cookie = AppStorage.Get(Constants.Cookie);
+    console.log('Jesen0823,MsgUnReadListView cookie:'+cookie);
     msgViewModel.getMsgUnRead().then((data: MsgData) => {
       this.msgList = data.datas;
       console.log('Jesen0823,MsgUnReadListView getMsgUnRead>>>', data);
     })
+    this.loginState = !Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)
+    EventObservable.observableLoginState.addObserver((state:boolean)=>{
+      console.log('Jesen0823, MsgUnReadListView, observableLoginState: '+state);
+      if (state) {
+        if(this.loginState != state){
+          this.loginState = state;
+        }
+      }
+    });
   }
 
   @Builder
@@ -44,7 +57,7 @@ export default struct MsgUnReadListView {
   }
 
   build() {
-    if (Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)) {
+    if (this.loginState) {
       if (Utils.isEmpty(this.msgList)) {
         this.EmptyDataUI()
       } else {

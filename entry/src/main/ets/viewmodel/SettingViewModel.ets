@@ -1,6 +1,7 @@
 import router from '@ohos.router';
 import ResourceBean from '../bean/ResourceBean';
 import Constants from '../common/contants/Constants'
+import EventObservable from '../common/interface/EventObservable';
 import { logoutRequest } from '../net/HttpRequest'
 
 class SettingViewModel {
@@ -10,6 +11,7 @@ class SettingViewModel {
         AppStorage.Set(Constants.Cookie, '');
         PersistentStorage.DeleteProp(Constants.Cookie);
         router.replaceUrl({ url: Constants.MainPage_Path });
+        EventObservable.observableLoginState.setData(false);
       }
     })
   }

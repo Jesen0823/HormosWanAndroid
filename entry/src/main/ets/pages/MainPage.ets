@@ -61,6 +61,7 @@ struct MainPage {
       .scrollable(false)
       .barHeight(Constants.BAR_HEIGHT)
       .onChange((index: number) => this.bottomIndex = index)
+      .animationDuration(0)
     }
     .width(Constants.FULL_PERCENT)
   }

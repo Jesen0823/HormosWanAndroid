@@ -3,6 +3,7 @@ import {loginRequest,registerRequest} from '../net/HttpRequest';
 import ResponseResult from '../net/ResponseResult';
 import {UserInfo} from '../bean/UserInfoBean';
 import Logger from '../utils/Logger';
+import EventObservable from '../common/interface/EventObservable';
 
 class UserAccountViewModel{
 
@@ -12,9 +13,11 @@ class UserAccountViewModel{
         if(data.errorCode === HttpConfig.SERVER_CODE_SUCCESS){
           Logger.info('userLogin success');
           resolve(data);
+          EventObservable.observableLoginState.setData(true);
         }else {
           Logger.error('userLogin failed',JSON.stringify(data));
           reject(data);
+          EventObservable.observableLoginState.setData(false);
         }
       })
     })
@@ -26,9 +29,11 @@ class UserAccountViewModel{
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {
           Logger.info('userRegister success');
           resolve(data);
+          EventObservable.observableLoginState.setData(true);
         } else {
           Logger.error('userRegister failed', JSON.stringify(data));
           reject(data);
+          EventObservable.observableLoginState.setData(false);
         }
       })
     })

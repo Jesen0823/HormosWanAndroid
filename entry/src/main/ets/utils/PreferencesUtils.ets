@@ -15,7 +15,6 @@ class PreferencesUtils {
     preferenceTheme = await dataPreferences.getPreferences(globalThis.abilityContext, PREFERENCES_NAME);
   }
 
-
   /**
    * 保存String数据
    * @param str

@@ -5,16 +5,29 @@ import msgViewModel from '../viewmodel/MsgViewModel'
 import { NavigatorModel } from '../viewmodel/NavigatorModel'
 import MsgItemView from './MsgItemView'
 import * as Utils from '../utils/StringUtils'
+import EventObservable from '../common/interface/EventObservable'
 
 @Component
 export default struct MsgReadListView{
-  @State msgList: MsgItem[] = []
+  @State msgList: MsgItem[] = [];
+  @State loginState:boolean = false;
 
   aboutToAppear() {
+    let cookie = AppStorage.Get(Constants.Cookie);
+    console.log('Jesen0823,MsgReadListView cookie:'+cookie);
     msgViewModel.getMsgRead(1).then((msgData: MsgData) => {
       this.msgList = msgData.datas
-      console.log('Jesen0823,readMsg>>>', msgData)
+      console.log('Jesen0823,readMsg>>>', JSON.stringify(msgData));
     })
+    this.loginState = !Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)
+    EventObservable.observableLoginState.addObserver((state:boolean)=>{
+      console.log('Jesen0823, MsgReadListView, observableLoginState: '+state);
+      if (state) {
+        if(this.loginState != state){
+          this.loginState = state;
+        }
+      }
+    });
   }
 
   @Builder
@@ -58,7 +71,7 @@ export default struct MsgReadListView{
   }
 
   build() {
-    if (!Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)) {
+    if (this.loginState) {
       if (Utils.isEmpty(this.msgList)) {
         this.EmptyDataUI()
       } else {
